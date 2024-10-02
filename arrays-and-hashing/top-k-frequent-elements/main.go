@@ -28,10 +28,6 @@ func topKFrequent(nums []int, k int) []int {
 		keys = append(keys, key)
 	}
 
-	for key, value := range numbers {
-		fmt.Printf("key: %d, value: %d\n", key, value)
-	}
-
 	sort.SliceStable(keys, func(i, j int) bool {
 		return numbers[keys[i]] > numbers[keys[j]]
 	})
